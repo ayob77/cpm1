@@ -88,20 +88,20 @@ def load_player_data(cpm):
         console.print("[bold yellow] '! ERROR: seems like your login is not properly set (✘)[/bold yellow]")
         exit(1)
 
+from rich.console import Console
+from rich.prompt import Prompt
+import requests
+
+console = Console()
+
+def load_key_data(cpm=None):
+    console.print("[bold][yellow]========[white][ 𝘽𝙔𝙋𝘼𝙎𝙎 𝙆𝙀𝙔 𝙎𝙔𝙎𝙏𝙀𝙈 ][/white]========[/yellow][/bold]")
+    console.print(f"[bold white]  >> Access Key  [/bold white]: [yellow][bold]BYPASSED[/bold][/yellow]")
+    console.print(f"[bold white]  >> Telegram ID : NONE[/bold white]")
+    console.print(f"[bold white]  >> Balance     : Unlimited[/bold white]")
+
      
 
-def load_key_data(cpm):
-
-    data = cpm.get_key_data()
-    
-    console.print("[bold][yellow]========[white][ 𝘼𝘾𝘾𝙀𝙎𝙎 𝙆𝙀𝙔 𝘿𝙀𝙏𝘼𝙄𝙇𝙎 ][/white]========[/yellow][/bold]")
-    
-    console.print(f"[bold white]  >> Access Key  [/bold white]: [yellow][bold]{data.get('access_key')}[/bold][/yellow]")
-    
-    console.print(f"[bold white]  >> Telegram ID : {data.get('telegram_id')}[/bold white]")
-    
-    console.print(f"[bold white]  >> Balance     : {data.get('coins') if not data.get('is_unlimited') else 'Unlimited'}[/bold white]")
-    
 
 def prompt_valid_value(content, tag, password=False):
     while True:
