@@ -1,3 +1,0 @@
-git add setup-anw.sh
-git commit -m "Add setup script for ANW Termux setup"
-git push origin main
